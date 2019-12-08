@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<title>{{ document.title }}</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center center;
+  background-size: cover;
+  background-image: url("{{ bgimg.src }}");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 1px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide"><img id="logo" src="{{ logo.src }}" alt="{{ logo.alt }}"></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small w3-large">
+      <a href="#about" class="w3-bar-item w3-button w3-padding-small"><i class="fa fa-id-badge"></i> ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button w3-padding-small"><i class="fa fa-users"></i> TEAM</a>
+      <a href="#work" class="w3-bar-item w3-button w3-padding-small"><i class="fa fa-wrench"></i> TOOLS</a>
+      <a href="#home" class="w3-bar-item w3-button w3-padding-small"><i class="fa fa-home"></i> HOME</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-small"><i class="fa fa-address-card-o"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">TOOLS</a>
+  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container" id="home">
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center" id="lblAboutTitle">{{ lblAboutTitle.innerHTML }}</h3>
+  <p class="w3-center w3-large" id="lblAboutCaption">{{ lblAboutCaption.innerHTML }}</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large" id="lblAboutFeature1Title">{{ lblAboutFeature1Title.innerHTML }}</p>
+      <p id="lblAboutFeature1Text">{{ lblAboutFeature1Text.innerHTML }}</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large" id="lblAboutFeature2Title">{{ lblAboutFeature2Title.innerHTML }}</p>
+      <p id="lblAboutFeature2Text">{{ lblAboutFeature2Text.innerHTML }}</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large" id="lblAboutFeature3Title">{{ lblAboutFeature3Title.innerHTML }}</p>
+      <p id="lblAboutFeature3Text">{{ lblAboutFeature3Text.innerHTML }}</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large" id="lblAboutFeature4Title">{{ lblAboutFeature4Title.innerHTML }}</p>
+      <p id="lblAboutFeature4Text">{{ lblAboutFeature4Text.innerHTML }}</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3 id="lblPromoTitle">{{ lblPromoTitle.innerHTML }}</h3>
+      <p id="lblPromoText">{{ lblPromoText.innerHTML }}</p>
+      <p><a href="{{ lblPromoLink.url }}" class="w3-button w3-black" id="lblPromoLink"><i class="fa fa-th"> </i> {{ lblPromoLink.innerHTML }}</a></p>
+    </div>
+    <div class="w3-col m6">
+      <img id="imgPromo" class="w3-image w3-round-large" src="{{ imgPromo.src }}" alt="{{ imgPromo.alt }}" width="700" height="394">
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center" id="lblTeamTitle">{{ lblTeamTitle.innerHTML }}</h3>
+  <p class="w3-center w3-large" id="lblTeamCaption">{{ lblTeamCaption.innerHTML }}<br></p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img id="imgTeam2" src="w3images/blank.jpg" alt="2" style="width:1%">
+        <div class="w3-container">
+          <h3 id="lblTeamFeature2Name">{{ lblTeamFeature2Name.innerHTML }}</h3>
+          <p class="w3-opacity" id="lblTeamFeature2Title">{{ lblTeamFeature2Title.innerHTML }}</p>
+          <p id="lblTeamFeature2Text">{{ lblTeamFeature2Text.innerHTML }}<br></p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img id="imgTeam1" src="w3images/blank.jpg" alt="1" style="width:1%">
+        <div class="w3-container">
+          <h3 id="lblTeamFeature1Name">{{ lblTeamFeature1Name.innerHTML }}</h3>
+          <p class="w3-opacity" id="lblTeamFeature1Title">{{ lblTeamFeature1Title.innerHTML }}</p>
+          <p id="lblTeamFeature1Text">{{ lblTeamFeature1Text.innerHTML }}</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img  id="imgTeam3" src="w3images/blank.jpg" alt="3" style="width:1%">
+        <div class="w3-container">
+          <h3 id="lblTeamFeature3Name">{{ lblTeamFeature3Name.innerHTML }}</h3>
+          <p class="w3-opacity" id="lblTeamFeature3Title">{{ lblTeamFeature3Title.innerHTML }}</p>
+          <p id="lblTeamFeature3Text">{{ lblTeamFeature3Text.innerHTML }}<br></p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img id="imgTeam4" src="w3images/blank.jpg" alt="4" style="width:1%">
+        <div class="w3-container">
+          <h3 id="lblTeamFeature4Name">{{ lblTeamFeature4Name.innerHTML }}</h3>
+          <p class="w3-opacity" id="lblTeamFeature4Title">{{ lblTeamFeature4Title.innerHTML }}</p>
+          <p id="lblTeamFeature4Text">{{ lblTeamFeature4Text.innerHTML }}<br></p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-text-white w3-padding-64" style="background-image: url({{ imgPromoStats.src }}); background-position: bottom center; background-size: width 100% height 100%; background-repeat: no-repeat; background-color: #06357a;">
+  <div class="w3-third">
+    <span class="w3-jumbo">&nbsp;</span>
+  </div>
+  <div class="w3-third">
+    <span class="w3-jumbo">&nbsp;</span>
+  </div>
+  <div class="w3-third">
+	
+    <span class="w3-jumbo">&nbsp;</span>
+   
+  </div>
+</div>
+
+<!-- Work Section -->
+<div class="w3-container" style="padding:128px 16px" id="work">
+  <h3 id="lblFleetTitle" class="w3-center">{{ lblWorkTitle.innerHTML }}</h3>
+  <p id="lblFleetCaption" class="w3-center w3-large">{{ lblWorkCaption.innerHTML }}</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img id="imgWork1" src="{{ imgWork1.src }}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="{{ imgWork1.alt }}">
+    </div>
+    <div class="w3-col l3 m6">
+      <img id="imgWork2" src="{{ imgWork2.src }}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="{{ imgWork2.alt }}">
+    </div>
+    <div class="w3-col l3 m6">
+      <img id="imgWork3" src="{{ imgWork3.src }}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="{{ imgWork3.alt }}">
+    </div>
+    <div class="w3-col l3 m6">
+      <img id="imgWork4" src="{{ imgWork4.src }}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="{{ imgWork4.alt }}">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img id="imgWork5" src="{{ imgWork5.src }}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="{{ imgWork5.alt }}">
+    </div>
+    <div class="w3-col l3 m6">
+      <img id="imgWork6" src="{{ imgWork6.src }}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="{{ imgWork6.alt }}">
+    </div>
+    <div class="w3-col l3 m6">
+      <img id="imgWork7" src="{{ imgWork7.src }}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="{{ imgWork7.alt }}">
+    </div>
+    <div class="w3-col l3 m6">
+      <img id="imgWork8" src="{{ imgWork8.src }}" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="{{ imgWork8.alt }}">
+    </div>
+  </div></div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 id="lblContactTitle" class="w3-center">{{ lblContactTitle.innerHTML }}</h3>
+  <p id="lblContactCaption" class="w3-center w3-large">{{ lblContactCaption.innerHTML }}</p>
+  <div style="margin-top:48px">
+    <p id="lblContactAddress"><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> {{ lblContactAddress.innerHTML }}</p>
+    <p id="lblContactPhone"><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> {{ lblContactPhone.innerHTML }}</p>
+    <p id="lblContactEmail"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> {{ lblContactEmail.innerHTML }}</p>
+    <br>
+    <form action="https://api.petitpingouin.org" target="_self" method="post">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    <!-- Image of location/airport -->
+    <img src="{{ imgBannerFoot.src }}" class="w3-image" style="width:100%;margin-top:48px" alt="{{ imgBannerFoot.alt }}">
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-text-white w3-padding-64" style="background-color: #06357a;">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a> and Designed for <a href="https://ipfs.io" title="IPFS.io" target="_blank" class="w3-hover-text-green">IPFS</a> deployment.<br><a href='https://ipfs.io/ipns/{{ webtarget.domain }}'>ipfs.io/ipns/{{ webtarget.domain }}</a></p>
+</footer>
+
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
