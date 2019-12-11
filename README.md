@@ -5,20 +5,20 @@ The website is distributed on IPFS main network, you may pin it using:
 
 `ipfs pin add /ipns/petitpingouin.org`
 
-#### English (en.petitpingouin.org)
+#### Pin English (en.petitpingouin.org)
 
 `ipfs pin add /ipns/en.petitpingouin.org`
 
-#### Français (fr.petitpingouin.org)
+#### Pin Français (fr.petitpingouin.org)
 
 `ipfs pin add /ipns/fr.petitpingouin.org`
 
 ## For developpers
-#### English (en.petitpingouin.org)
+#### Get English (en.petitpingouin.org)
 
 `ipfs get /ipns/en.petitpingouin.org`
 
-#### Français (fr.petitpingouin.org)
+#### Get Français (fr.petitpingouin.org)
 
 `ipfs get /ipns/fr.petitpingouin.org`
 
